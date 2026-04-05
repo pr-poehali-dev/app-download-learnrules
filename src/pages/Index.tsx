@@ -291,7 +291,9 @@ const Index = () => {
               </div>
               <div className="border-t border-border pt-6 space-y-3">
                 <a
-                  href="#"
+                  href="https://www.dropbox.com/scl/fi/dmasmr4j7gp03ujz02ink/siteapp.apk?rlkey=wu1rffjhwu5id9y4oe2uhl4g2&st=trc3wskd&dl=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-foreground text-background py-3.5 rounded-xl font-medium hover:opacity-80 transition-opacity"
                 >
                   <Icon name="Download" size={18} className="text-background" />
