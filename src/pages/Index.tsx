@@ -213,40 +213,6 @@ const Index = () => {
             </div>
           </section>
 
-          {/* Reviews */}
-          <section className="bg-secondary/30 border-t border-border py-24">
-            <div className="max-w-5xl mx-auto px-6">
-              <div className="flex items-end justify-between mb-14">
-                <div>
-                  <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-3">Отзывы</p>
-                  <h2 className="text-3xl font-bold text-foreground tracking-tight">Что говорят пользователи</h2>
-                </div>
-                <div className="flex items-center gap-3 pb-1">
-                  <div className="text-5xl font-bold text-foreground">{avgRating}</div>
-                  <div>
-                    <StarRating rating={Math.round(parseFloat(avgRating))} />
-                    <p className="text-xs text-muted-foreground mt-1">{reviews.length} отзывов</p>
-                  </div>
-                </div>
-              </div>
-              <div className="grid md:grid-cols-3 gap-5">
-                {reviews.map((r) => (
-                  <div
-                    key={r.name}
-                    className="bg-background p-6 rounded-2xl border border-border hover:shadow-sm transition-shadow duration-300"
-                  >
-                    <StarRating rating={r.rating} />
-                    <p className="text-sm text-foreground leading-relaxed my-4">"{r.text}"</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-foreground">{r.name}</span>
-                      <span className="text-xs text-muted-foreground">{r.date}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* CTA */}
           <section className="max-w-5xl mx-auto px-6 py-24 text-center">
             <h2 className="text-4xl font-bold text-foreground tracking-tight mb-4">
