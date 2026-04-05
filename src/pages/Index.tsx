@@ -5,39 +5,39 @@ const HERO_IMAGE = "https://cdn.poehali.dev/projects/5d8e2707-5a44-48eb-92d3-567
 
 const reviews = [
   {
-    name: "Анна К.",
+    name: "Маша Д.",
     rating: 5,
-    text: "Пользуюсь уже полгода — полностью изменило мой рабочий процесс. Чисто, быстро, без лишнего.",
+    text: "Готовлюсь к контрольным прямо с телефона. Все правила по русскому и математике под рукой!",
     date: "март 2026",
   },
   {
-    name: "Михаил Т.",
+    name: "Артём К.",
     rating: 5,
-    text: "Наконец-то приложение, которое не пытается сделать всё сразу. Делает одно, но идеально.",
+    text: "Раньше путался в правилах по физике и химии. Теперь всё структурировано — нахожу за секунды.",
     date: "февраль 2026",
   },
   {
-    name: "Светлана В.",
-    rating: 4,
-    text: "Дизайн на высоте, скорость работы отличная. Жду обновление с тёмной темой.",
+    name: "Соня Л.",
+    rating: 5,
+    text: "Очень удобно повторять перед уроком. Особенно выручает по литературе и истории.",
     date: "январь 2026",
   },
   {
-    name: "Дмитрий О.",
-    rating: 5,
-    text: "Команда быстро отвечает на вопросы. Продукт явно сделан с любовью к деталям.",
+    name: "Никита Р.",
+    rating: 4,
+    text: "Пользуюсь каждый день. Оценки реально улучшились — теперь не забываю правила.",
     date: "март 2026",
   },
   {
-    name: "Елена Р.",
+    name: "Даша М.",
     rating: 5,
-    text: "Скачала для пробы — осталась навсегда. Рекомендую всем коллегам.",
+    text: "Скачала перед ОГЭ — не пожалела. Все нужные правила в одном месте, удобный поиск.",
     date: "апрель 2026",
   },
   {
-    name: "Игорь С.",
+    name: "Влад С.",
     rating: 4,
-    text: "Интуитивный интерфейс, не нужна инструкция. Работает стабильно.",
+    text: "Интерфейс простой, не надо разбираться. Работает быстро даже без интернета.",
     date: "март 2026",
   },
 ];
@@ -93,7 +93,7 @@ const Index = () => {
             <div className="w-7 h-7 bg-foreground rounded-md flex items-center justify-center">
               <Icon name="Zap" size={14} className="text-background" />
             </div>
-            <span className="font-semibold text-foreground tracking-tight">Appname</span>
+            <span className="font-semibold text-foreground tracking-tight">УчиВсеПравила</span>
           </div>
           <nav className="flex items-center gap-6">
             <NavLink label="Главная" active={page === "home"} onClick={() => setPage("home")} />
@@ -110,13 +110,13 @@ const Index = () => {
               <div>
                 <div className="inline-flex items-center gap-2 bg-secondary text-muted-foreground text-xs font-medium px-3 py-1.5 rounded-full mb-6 opacity-0-init animate-fade-up">
                   <span className="w-1.5 h-1.5 bg-foreground rounded-full" />
-                  Версия 2.0 уже доступна
+                  Правила всех школьных предметов
                 </div>
                 <h1 className="text-5xl font-bold tracking-tight text-foreground leading-[1.1] mb-6 opacity-0-init animate-fade-up delay-100">
-                  Просто.<br />Быстро.<br />Работает.
+                  Все правила.<br />Один экран.<br />Любой предмет.
                 </h1>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8 opacity-0-init animate-fade-up delay-200">
-                  Приложение, которое помогает сосредоточиться на главном — без лишнего шума и сложности.
+                  Учи правила по математике, русскому, физике, химии и другим предметам — всё в одном приложении, всегда под рукой.
                 </p>
                 <div className="flex items-center gap-4 opacity-0-init animate-fade-up delay-300">
                   <button
@@ -148,9 +148,9 @@ const Index = () => {
           <section className="border-y border-border bg-secondary/40">
             <div className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-3 divide-x divide-border">
               {[
-                { value: "50 000+", label: "Активных пользователей" },
+                { value: "30 000+", label: "Учеников" },
                 { value: avgRating + " / 5", label: "Средний рейтинг" },
-                { value: "12 мес.", label: "На рынке" },
+                { value: "15+", label: "Школьных предметов" },
               ].map((stat) => (
                 <div key={stat.label} className="px-8 first:pl-0 last:pr-0 text-center">
                   <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
@@ -164,39 +164,39 @@ const Index = () => {
           <section className="max-w-5xl mx-auto px-6 py-24">
             <div className="mb-14">
               <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-3">Возможности</p>
-              <h2 className="text-3xl font-bold text-foreground tracking-tight">Всё, что нужно. Ничего лишнего.</h2>
+              <h2 className="text-3xl font-bold text-foreground tracking-tight">Учись умнее, а не дольше.</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  icon: "Layers",
-                  title: "Чистый интерфейс",
-                  desc: "Только нужные функции. Никакого визуального шума, который мешает работе.",
+                  icon: "BookOpen",
+                  title: "Все предметы",
+                  desc: "Математика, русский, физика, химия, биология, история и ещё 10+ предметов.",
                 },
                 {
-                  icon: "Zap",
-                  title: "Молниеносная скорость",
-                  desc: "Запускается за секунду, работает без тормозов — даже на старых устройствах.",
+                  icon: "Search",
+                  title: "Быстрый поиск",
+                  desc: "Найди нужное правило за секунду — просто введи ключевое слово.",
                 },
                 {
-                  icon: "Shield",
-                  title: "Полная безопасность",
-                  desc: "Ваши данные защищены шифрованием. Никакой рекламы и слежки.",
+                  icon: "Bookmark",
+                  title: "Закладки",
+                  desc: "Сохраняй правила, которые учишь сейчас, чтобы быстро возвращаться к ним.",
+                },
+                {
+                  icon: "WifiOff",
+                  title: "Без интернета",
+                  desc: "Работает офлайн — на уроке, в метро, в любом месте.",
+                },
+                {
+                  icon: "GraduationCap",
+                  title: "Подготовка к ОГЭ/ЕГЭ",
+                  desc: "Правила отобраны с учётом требований экзаменов.",
                 },
                 {
                   icon: "Smartphone",
                   title: "iOS и Android",
-                  desc: "Нативные версии для обеих платформ с одним аккаунтом.",
-                },
-                {
-                  icon: "RefreshCw",
-                  title: "Синхронизация",
-                  desc: "Все изменения мгновенно появляются на всех ваших устройствах.",
-                },
-                {
-                  icon: "HeartHandshake",
-                  title: "Поддержка 24/7",
-                  desc: "Живые люди, а не боты. Отвечаем в течение часа в любое время.",
+                  desc: "Нативные версии для обеих платформ — один аккаунт, все устройства.",
                 },
               ].map((f) => (
                 <div
@@ -250,10 +250,10 @@ const Index = () => {
           {/* CTA */}
           <section className="max-w-5xl mx-auto px-6 py-24 text-center">
             <h2 className="text-4xl font-bold text-foreground tracking-tight mb-4">
-              Готовы начать?
+              Готов учиться лучше?
             </h2>
             <p className="text-muted-foreground mb-8 text-lg">
-              Бесплатно. Без карты. Без ограничений на старте.
+              Бесплатно. Без рекламы. Все предметы сразу.
             </p>
             <button
               onClick={() => setPage("download")}
@@ -328,13 +328,14 @@ const Index = () => {
                 <Icon name="Info" size={15} className="text-background" />
               </div>
               <h3 className="font-semibold text-foreground">Что нового в версии 2.0</h3>
+
             </div>
             <ul className="space-y-3">
               {[
-                "Полностью переработанный дизайн интерфейса",
-                "Скорость запуска увеличена в 3 раза",
-                "Новая система синхронизации между устройствами",
-                "Улучшенная безопасность и шифрование данных",
+                "Добавлены правила по 5 новым предметам",
+                "Умный поиск с подсказками",
+                "Режим повторения: проверь себя перед уроком",
+                "Работа без интернета на всех устройствах",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Icon name="Check" size={15} className="text-foreground mt-0.5 shrink-0" />
@@ -353,9 +354,9 @@ const Index = () => {
             <div className="w-6 h-6 bg-foreground rounded-md flex items-center justify-center">
               <Icon name="Zap" size={12} className="text-background" />
             </div>
-            <span className="text-sm font-medium text-foreground">Appname</span>
+            <span className="text-sm font-medium text-foreground">УчиВсеПравила</span>
           </div>
-          <p className="text-xs text-muted-foreground">© 2026 Appname. Все права защищены.</p>
+          <p className="text-xs text-muted-foreground">© 2026 УчиВсеПравила. Все права защищены.</p>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">Политика</a>
             <a href="#" className="hover:text-foreground transition-colors">Условия</a>
