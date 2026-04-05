@@ -271,54 +271,37 @@ const Index = () => {
           <div className="mb-14 opacity-0-init animate-fade-up">
             <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-3">Скачать</p>
             <h1 className="text-4xl font-bold text-foreground tracking-tight mb-4">
-              Выберите платформу
+              Скачать для Android
             </h1>
             <p className="text-muted-foreground text-lg">
-              Доступно на всех популярных платформах. Один аккаунт — все устройства.
+              Установи APK прямо сейчас — бесплатно, без магазина приложений.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16 opacity-0-init animate-fade-up delay-100">
-            {[
-              {
-                icon: "Smartphone",
-                platform: "iOS",
-                sub: "iPhone & iPad",
-                badge: "App Store",
-                req: "iOS 15+",
-              },
-              {
-                icon: "Smartphone",
-                platform: "Android",
-                sub: "Смартфоны и планшеты",
-                badge: "Google Play",
-                req: "Android 9+",
-              },
-              {
-                icon: "Monitor",
-                platform: "Desktop",
-                sub: "Windows & macOS",
-                badge: "Прямая загрузка",
-                req: "Win 10 / macOS 12+",
-              },
-            ].map((p) => (
-              <div
-                key={p.platform}
-                className="group border border-border rounded-2xl p-8 hover:border-foreground/30 hover:shadow-md transition-all duration-300 cursor-pointer"
-              >
-                <div className="w-12 h-12 bg-foreground rounded-2xl flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
-                  <Icon name={p.icon} size={22} className="text-background" />
+          <div className="max-w-md mb-16 opacity-0-init animate-fade-up delay-100">
+            <div className="border border-border rounded-2xl p-8 hover:border-foreground/20 hover:shadow-md transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-foreground rounded-2xl flex items-center justify-center shrink-0">
+                  <Icon name="Smartphone" size={26} className="text-background" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">{p.platform}</h3>
-                <p className="text-sm text-muted-foreground mb-5">{p.sub}</p>
-                <div className="border-t border-border pt-5">
-                  <div className="text-xs text-muted-foreground mb-3">Требования: {p.req}</div>
-                  <button className="w-full bg-foreground text-background py-2.5 rounded-xl text-sm font-medium hover:opacity-80 transition-opacity">
-                    {p.badge}
-                  </button>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">УчиВсеПравила.apk</h3>
+                  <p className="text-sm text-muted-foreground">Android 9+ · ~18 МБ</p>
                 </div>
               </div>
-            ))}
+              <div className="border-t border-border pt-6 space-y-3">
+                <a
+                  href="#"
+                  className="flex items-center justify-center gap-2 w-full bg-foreground text-background py-3.5 rounded-xl font-medium hover:opacity-80 transition-opacity"
+                >
+                  <Icon name="Download" size={18} className="text-background" />
+                  Скачать APK
+                </a>
+                <p className="text-xs text-muted-foreground text-center">
+                  При установке разрешите «Установку из неизвестных источников»
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Version info */}
